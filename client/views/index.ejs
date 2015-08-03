@@ -1,0 +1,759 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Whether it's maintenance, performance or repair, Dynasport has your BMW and Mini covered. Located in NW Portland, Oregon near the Pearl District.">
+	<title>DynaSport, LLC</title>
+	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+	<!-- Bootstrap theme -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.5/slate/bootstrap.min.css">
+	<!-- Awesome icons dude! -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+	<!-- Animate.css -->
+	<link rel="stylesheet" href="stylesheets/animate.css">
+	<!-- Sweetalert.css -->
+	<link rel="stylesheet" href="javascripts/sweetalert/sweetalert.css">
+	<!-- Custom CSS -->
+	<link rel="stylesheet" href="stylesheets/style.css">
+	<!-- Google Fonts -->
+	<link href='http://fonts.googleapis.com/css?family=Racing+Sans+One' rel='stylesheet' type='text/css'>
+</head>
+<body>
+<!-- 	ᕙ(⇀‸↼‶)ᕗ	-->
+	<header id="head">
+		<div class="container">
+			<a type="button" data-toggle="modal" data-target="#dashlightsModal" data-tooltip="tooltip" data-placement="bottom" title="Dashboard Lighting Guide"><i class="fa fa-exclamation-triangle fa-5x"></i></a>
+		</div>
+		<div id="headerContent" data-stellar-ratio="0.35">
+			<h1><span class="dynasport wow zoomInLeft" id="dyna">Dyna</span><span class="dynasport wow zoomInRight" id="sport">Sport</span></h1>
+			<h2 class="wow fadeIn">More than a service facility</h2>
+		</div>
+	</header>
+
+<!-- Modal -->
+	<div id="dashlightsModal" class="modal fade" role="dialog">
+		<div class="modal-dialog modal-lg">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal"><i class="fa fa-times-circle fa-lg"></i></button>
+					<h3 class="modal-title">Dashboard Lights</h3>
+				</div>
+				<div class="modal-body">
+					<div class="row">
+						<div class="col-md-3">
+							<h4>Select Your Make:</h4>
+							<a type="button" class="btn btn-info btn-lg carTog bmw_light" data-id="bmwLights">BMW</a> <a type="button" class="btn btn-danger btn-lg carTog mini_light" data-id="miniLights">MINI</a>
+						</div>
+						<div class="col-md-9 dashLights">
+							<h4>Select Your Light: <span id="bmwSelected">BMW</span><span id="miniSelected">MINI</span></h4>
+							<div class="light_icons bmwLights">
+								<img src="images/bmwLights/turnsignals.jpg" alt="turnsignals" class="tog" data-id="bmwTurns">
+								<img src="images/bmwLights/fogLamps.jpg" alt="fog lamps" class="tog" data-id="bmwFogLamps">
+								<img src="images/bmwLights/highBeams.jpg" alt="high beams" class="tog" data-id="bmwHighBeams"><img src="images/bmwLights/parkingBreak.jpg" alt="parking break" class="tog" data-id="bmwPbreak">
+								<img src="images/bmwLights/parkingLamps.jpg" alt="parking lamps" class="tog" data-id="bmwParkingLamps">
+								<img src="images/bmwLights/airbag.jpg" alt="airbag" class="tog" data-id="bmwAirBag">
+								<img src="images/bmwLights/ABS.jpg" alt="anitlock brake" class="tog" data-id="bmwABS">
+								<img src="images/bmwLights/battery.jpg" alt="battery" class="tog" data-id="bmwBattery">
+								<img src="images/bmwLights/caution.jpg" alt="caution" class="tog" data-id="bmwCaution">
+								<img src="images/bmwLights/coolant.jpg" alt="coolant level" class="tog" data-id="bmwCoolant">
+								<img src="images/bmwLights/empty.jpg" alt="gas empty" class="tog" data-id="bmwEmpty">
+								<img src="images/bmwLights/overheating.jpg" alt="overheating" class="tog" data-id="bmwOverheat">
+								<img src="images/bmwLights/engine.jpg" alt="engine" class="tog" data-id="bmwEngine">
+								<img src="images/bmwLights/bulb.jpg" alt="exterior lighting" class="tog" data-id="bmwBulb">
+								<img src="images/bmwLights/oilLevel.jpg" alt="oil level" class="tog" data-id="bmwOilLevel">
+								<img src="images/bmwLights/safetyBelt.jpg" alt="safety belt" class="tog" data-id="bmwSafetyBelt">
+								<img src="images/bmwLights/TPM.jpg" alt="tire pressure monitor" class="tog" data-id="bmwTPM">
+								<img src="images/bmwLights/doorOpen.jpg" alt="door open" class="tog" data-id="bmwDoor">
+								<img src="images/bmwLights/wiperFluid.jpg" alt="window washer fluid" class="tog" data-id="bmwWiperFluid">
+								<img src="images/bmwLights/AutoHold.jpg" alt="automatic hold" class="tog" data-id="bmwAutoHold">
+								<img src="images/bmwLights/highBeamAssist.jpg" alt="high beam assistant" class="tog" data-id="bmwHighBeamAssist">
+								<img src="images/bmwLights/activeCruiseCtrl.jpg" alt="active cruise control" class="tog" data-id="bmwActiveCruise">
+								<img src="images/bmwLights/vehicleDetection.jpg" alt="vehicle detection" class="tog" data-id="bmwVehicleDetection">
+								<img src="images/bmwLights/cruiseCtrl.jpg" alt="cruise control" class="tog" data-id="bmwCruiseCtrl">
+								<img src="images/bmwLights/laneWarning.jpg" alt="lane departure warning" class="tog" data-id="bmwLaneWarning">
+								<img src="images/bmwLights/brakePads.jpg" alt="brake pads" class="tog" data-id="bmwBrakePads">
+								<img src="images/bmwLights/DSC.jpg" alt="Dynamic Stability Control" class="tog" data-id="bmwDSC">
+								<img src="images/bmwLights/gasCap.jpg" alt="gas cap" class="tog" data-id="bmwGasCap">
+								<img src="images/bmwLights/service.jpg" alt="service" class="tog" data-id="bmwService">
+								<img src="images/bmwLights/steering.jpg" alt="steering" class="tog" data-id="bmwSteering">
+								<img src="images/bmwLights/temp.jpg" alt="outside temperature" class="tog" data-id="bmwTemp">
+							</div>
+							<div class="light_icons miniLights">
+								<img src="images/miniLights/turnsignals.jpg" alt="turn signals" class="tog" data-id="miniTurns">
+								<img src="images/miniLights/highBeams.jpg" alt="high beams" class="tog" data-id="miniHighBeams">
+								<img src="images/miniLights/fogLamps.jpg" alt="fog lamps" class="tog" data-id="miniFogLamps">
+								<img src="images/miniLights/rear-fogLamps.jpg" alt="rear fog lamps" class="tog" data-id="miniRearFogLamps">
+								<img src="images/miniLights/empty.jpg" alt="low fuel" class="tog" data-id="miniLowFuel">
+								<img src="images/miniLights/lights-on.jpg" alt="lights on" class="tog" data-id="miniLightsOn">
+								<img src="images/miniLights/parking-lights.jpg" alt="parking lights on" class="tog" data-id="miniParkingLights">
+								<img src="images/miniLights/doorOpen.jpg" alt="door open" class="tog" data-id="miniDoorOpen">
+								<img src="images/miniLights/hood-open.jpg" alt="hood open" class="tog" data-id="miniHoodOpen">
+								<img src="images/miniLights/wiperFluid.jpg" alt="wiper fluid" class="tog" data-id="miniWiperFluid">
+								<img src="images/miniLights/service-due.jpg" alt="service due" class="tog" data-id="miniServiceDue">
+								<img src="images/miniLights/gear-selector.jpg" alt="gear not in park position" class="tog" data-id="miniGearSelector">
+								<img src="images/miniLights/gear-p-not-engaged.jpg" alt="gear P not engaged" class="tog" data-id="miniP-noEngage">
+								<img src="images/miniLights/steering-lock.jpg" alt="electronic steering lock" class="tog" data-id="miniE-steeringLock">
+								<img src="images/miniLights/cruise-fail.jpg" alt="cruise control failure" class="tog" data-id="miniCruiseFail">
+								<img src="images/miniLights/park-distance.jpg" alt="park distance control failure" class="tog" data-id="miniParkDistance">
+								<img src="images/miniLights/bulb.jpg" alt="exterior bulb failure" class="tog" data-id="miniBulb">
+								<img src="images/miniLights/headlight-fail.jpg" alt="low-beam or fog light failure" class="tog" data-id="miniLightFail">
+								<img src="images/miniLights/highbeam-fail.jpg" alt="high-beam failure" class="tog" data-id="miniHighBeamFail">
+								<img src="images/miniLights/rear-foglight-fail.jpg" alt="rear fog light failure" class="tog" data-id="miniRearFogFail">
+								<img src="images/miniLights/headlight-throw-fail.jpg" alt="headlight throw failure" class="tog" data-id="miniHeadThrowFail">
+								<img src="images/miniLights/adaptive-headlight-fail.jpg" alt="adaptive headlight failure" class="tog" data-id="miniAdaptiveLightFail">
+								<img src="images/miniLights/coolant.jpg" alt="coolant level low" class="tog" data-id="miniCoolant">
+								<img src="images/miniLights/safetyBelt.jpg" alt="safety belt" class="tog" data-id="miniSafetyBelt">
+								<img src="images/miniLights/airbag.jpg" alt="airbag" class="tog" data-id="miniAirBag">
+								<img src="images/miniLights/power-steering.jpg" alt="power steering" class="tog" data-id="miniPowerSteering">
+								<img src="images/miniLights/outside-temp.jpg" alt="outside temperature" class="tog" data-id="miniTemp">
+								<img src="images/miniLights/engine-no-start.jpg" alt="engine refuses to start" class="tog" data-id="miniEngineNoStart">
+								<img src="images/miniLights/driver-door-on.jpg" alt="ignition on door open" class="tog" data-id="miniDoorEngineOn">
+								<img src="images/miniLights/diesel-preheat.jpg" alt="diesel preheat" class="tog" data-id="miniDieselPreheat">
+								<img src="images/miniLights/remote-control.jpg" alt="remote control faulty" class="tog" data-id="miniRemoteControl">
+								<img src="images/miniLights/battery-remote.jpg" alt="remote control battery" class="tog" data-id="miniBatteryRemote">
+								<img src="images/miniLights/engine-malfunction.jpg" alt="engine malfunction" class="tog" data-id="miniEngineMalfunction">
+								<img src="images/miniLights/engine.jpg" alt="engine fault" class="tog" data-id="miniEngine">
+								<img src="images/miniLights/battery.jpg" alt="battery" class="tog" data-id="miniBattery">
+								<img src="images/miniLights/brake.jpg" alt="brake" class="tog" data-id="miniBrake">
+								<img src="images/miniLights/engine-temp.jpg" alt="engine temperature" class="tog" data-id="miniEngineTemp">
+								<img src="images/miniLights/vehicle-on-stand.jpg" alt="service stand" class="tog" data-id="miniServiceStand">
+								<img src="images/miniLights/ABS.jpg" alt="anit-lock brake" class="tog" data-id="miniABS">
+								<img src="images/miniLights/oilLevel.jpg" alt="oil level" class="tog" data-id="miniOilLevel">
+								<img src="images/miniLights/TPM.jpg" alt="run flat" class="tog" data-id="miniTPM">
+								<img src="images/miniLights/transmission-overheating.jpg" alt="transmission overheating" class="tog" data-id="miniTransHeat">
+								<img src="images/miniLights/trans-fault-dash.jpg" alt="transmission fault dashboard" class="tog" data-id="miniTransFault">
+								<img src="images/miniLights/DSC.jpg" alt="traction control" class="tog" data-id="miniDSC">
+								<img src="images/miniLights/electric-steering-lock.jpg" alt="electric steering lock" class="tog" data-id="miniESL">
+							</div>
+						</div>
+					</div>
+					<hr>
+					<div class="row">
+						<div class="col-md-4 lighting">
+							<h4>Light:</h4>
+							<!-- BMW Lighting -->
+							<img src="images/bmwLights/turnsignals.jpg" alt="turnsignals" class="light_info bmwTurns">
+							<img src="images/bmwLights/fogLamps.jpg" alt="fog lamps" class="light_info bmwFogLamps">
+							<img src="images/bmwLights/highBeams.jpg" alt="high beams" class="light_info bmwHighBeams">
+							<img src="images/bmwLights/parkingLamps.jpg" alt="parking lamps" class="light_info bmwParkingLamps">
+							<img src="images/bmwLights/airbag.jpg" alt="airbag" class="light_info bmwAirBag">
+							<img src="images/bmwLights/ABS.jpg" alt="anitlock brake" class="light_info bmwABS">
+							<img src="images/bmwLights/battery.jpg" alt="battery" class="light_info bmwBattery">
+							<img src="images/bmwLights/caution.jpg" alt="caution" class="light_info bmwCaution">
+							<img src="images/bmwLights/coolant.jpg" alt="coolant level" class="light_info bmwCoolant">
+							<img src="images/bmwLights/empty.jpg" alt="gas empty" class="light_info bmwEmpty">
+							<img src="images/bmwLights/overheating.jpg" alt="overheating" class="light_info bmwOverheat">
+							<img src="images/bmwLights/engine.jpg" alt="engine" class="light_info bmwEngine">
+							<img src="images/bmwLights/bulb.jpg" alt="exterior lighting" class="light_info bmwBulb">
+							<img src="images/bmwLights/oilLevel.jpg" alt="oil level" class="light_info bmwOilLevel">
+							<img src="images/bmwLights/safetyBelt.jpg" alt="safety belt" class="light_info bmwSafetyBelt">
+							<img src="images/bmwLights/TPM.jpg" alt="tire pressure monitor" class="light_info bmwTPM">
+							<img src="images/bmwLights/doorOpen.jpg" alt="door open" class="light_info bmwDoor">
+							<img src="images/bmwLights/wiperFluid.jpg" alt="window washer fluid" class="light_info bmwWiperFluid">
+							<img src="images/bmwLights/parkingBreak.jpg" alt="bmw parking break" class="light_info bmwPbreak">
+							<img src="images/bmwLights/AutoHold.jpg" alt="bmw automatic hold" class="light_info bmwAutoHold">
+							<img src="images/bmwLights/highBeamAssist.jpg" alt="bmw high beam assistant" class="light_info bmwHighBeamAssist">
+							<img src="images/bmwLights/activeCruiseCtrl.jpg" alt="bmw active cruise control" class="light_info bmwActiveCruise">
+							<img src="images/bmwLights/vehicleDetection.jpg" alt="bmw vehicle detection" class="light_info bmwVehicleDetection">
+							<img src="images/bmwLights/cruiseCtrl.jpg" alt="bmw cruise control" class="light_info bmwCruiseCtrl">
+							<img src="images/bmwLights/laneWarning.jpg" alt="bmw lane departure warning" class="light_info bmwLaneWarning">
+							<img src="images/bmwLights/brakePads.jpg" alt="bmw brake pads" class="light_info bmwBrakePads">
+							<img src="images/bmwLights/DSC.jpg" alt="bmw Dynamic Stability Control" class="light_info bmwDSC">
+							<img src="images/bmwLights/gasCap.jpg" alt="bmw gas cap" class="light_info bmwGasCap">
+							<img src="images/bmwLights/service.jpg" alt="bmw service" class="light_info bmwService">
+							<img src="images/bmwLights/steering.jpg" alt="bmw steering" class="light_info bmwSteering">
+							<img src="images/bmwLights/temp.jpg" alt="bmw outside temperature" class="light_info bmwTemp">
+							<!-- MINI Lighting -->
+							<img src="images/miniLights/turnsignals.jpg" alt="turn signals" class="light_info miniTurns">
+							<img src="images/miniLights/highBeams.jpg" alt="high beams" class="light_info miniHighBeams">
+							<img src="images/miniLights/fogLamps.jpg" alt="fog lamps" class="light_info miniFogLamps">
+							<img src="images/miniLights/rear-fogLamps.jpg" alt="rear fog lamps" class="light_info miniRearFogLamps">
+							<img src="images/miniLights/empty.jpg" alt="low fuel" class="light_info miniLowFuel">
+							<img src="images/miniLights/lights-on.jpg" alt="lights on" class="light_info miniLightsOn">
+							<img src="images/miniLights/parking-lights.jpg" alt="parking lights on" class="light_info miniParkingLights">
+							<img src="images/miniLights/doorOpen.jpg" alt="door open" class="light_info miniDoorOpen">
+							<img src="images/miniLights/hood-open.jpg" alt="hood open" class="light_info miniHoodOpen">
+							<img src="images/miniLights/wiperFluid.jpg" alt="wiper fluid" class="light_info miniWiperFluid">
+							<img src="images/miniLights/service-due.jpg" alt="service due" class="light_info miniServiceDue">
+							<img src="images/miniLights/gear-selector.jpg" alt="gear not in park position" class="light_info miniGearSelector">
+							<img src="images/miniLights/gear-p-not-engaged.jpg" alt="gear P not engaged" class="light_info miniP-noEngage">
+							<img src="images/miniLights/steering-lock.jpg" alt="electronic steering lock" class="light_info miniE-steeringLock">
+							<img src="images/miniLights/cruise-fail.jpg" alt="cruise control failure" class="light_info miniCruiseFail">
+							<img src="images/miniLights/park-distance.jpg" alt="park distance control failure" class="light_info miniParkDistance">
+							<img src="images/miniLights/bulb.jpg" alt="exterior bulb failure" class="light_info miniBulb">
+							<img src="images/miniLights/headlight-fail.jpg" alt="low-beam or fog light failure" class="light_info miniLightFail">
+							<img src="images/miniLights/highbeam-fail.jpg" alt="high-beam failure" class="light_info miniHighBeamFail">
+							<img src="images/miniLights/rear-foglight-fail.jpg" alt="rear fog light failure" class="light_info miniRearFogFail">
+							<img src="images/miniLights/headlight-throw-fail.jpg" alt="headlight throw failure" class="light_info miniHeadThrowFail">
+							<img src="images/miniLights/adaptive-headlight-fail.jpg" alt="adaptive headlight failure" class="light_info miniAdaptiveLightFail">
+							<img src="images/miniLights/coolant.jpg" alt="coolant level low" class="light_info miniCoolant">
+							<img src="images/miniLights/safetyBelt.jpg" alt="safety belt" class="light_info miniSafetyBelt">
+							<img src="images/miniLights/airbag.jpg" alt="airbag" class="light_info miniAirBag">
+							<img src="images/miniLights/power-steering.jpg" alt="power steering" class="light_info miniPowerSteering">
+							<img src="images/miniLights/outside-temp.jpg" alt="outside temperature" class="light_info miniTemp">
+							<img src="images/miniLights/engine-no-start.jpg" alt="engine refuses to start" class="light_info miniEngineNoStart">
+							<img src="images/miniLights/driver-door-on.jpg" alt="ignition on door open" class="light_info miniDoorEngineOn">
+							<img src="images/miniLights/diesel-preheat.jpg" alt="diesel preheat" class="light_info miniDieselPreheat">
+							<img src="images/miniLights/remote-control.jpg" alt="remote control faulty" class="light_info miniRemoteControl">
+							<img src="images/miniLights/battery-remote.jpg" alt="remote control battery" class="light_info miniBatteryRemote">
+							<img src="images/miniLights/engine-malfunction.jpg" alt="engine malfunction" class="light_info miniEngineMalfunction">
+							<img src="images/miniLights/engine.jpg" alt="engine fault" class="light_info miniEngine">
+							<img src="images/miniLights/battery.jpg" alt="battery" class="light_info miniBattery">
+							<img src="images/miniLights/brake.jpg" alt="brake" class="light_info miniBrake">
+							<img src="images/miniLights/engine-temp.jpg" alt="engine temperature" class="light_info miniEngineTemp">
+							<img src="images/miniLights/vehicle-on-stand.jpg" alt="service stand" class="light_info miniBrake miniServiceStand">
+							<img src="images/miniLights/ABS.jpg" alt="anit-lock brake" class="light_info miniABS">
+							<img src="images/miniLights/oilLevel.jpg" alt="oil level" class="light_info miniOilLevel">
+							<img src="images/miniLights/TPM.jpg" alt="run flat" class="light_info miniTPM">
+							<img src="images/miniLights/transmission-overheating.jpg" alt="transmission overheating" class="light_info miniTransHeat">
+							<img src="images/miniLights/trans-fault-dash.jpg" alt="transmission fault dashboard" class="light_info miniTransFault">
+							<img src="images/miniLights/DSC.jpg" alt="traction control" class="light_info miniDSC">
+							<img src="images/miniLights/electric-steering-lock.jpg" alt="electric steering lock" class="light_info miniESL">
+						</div>
+						<div class="col-md-8">
+							<h4>Info / Possible Actions:</h4>
+							<p class="light_info bmwTurns">Turn Signals</p>
+							<p class="light_info bmwPbreak">Parking Break</p>
+							<p class="light_info bmwAutoHold">Automatic Hold</p>
+							<p class="light_info bmwFogLamps">Front Fog Lamps</p>
+							<p class="light_info bmwHighBeams">High Beams</p>
+							<p class="light_info bmwHighBeamAssist">High Beam Assistant</p>
+							<p class="light_info bmwParkingLamps">Parking Lamps, Headlamp Control</p>
+							<p class="light_info bmwActiveCruise">Active Cruise Control</p>
+							<p class="light_info bmwVehicleDetection">Vehicle Detection, Active Cruise Control</p>
+							<p class="light_info bmwCruiseCtrl">Cruise Control</p>
+							<p class="light_info bmwLaneWarning">Lane Departure Warning</p>
+							<p class="light_info bmwAirBag">Airbag System</p>
+							<ul class="light_info bmwAirBag">
+								<li>Belt Tensioners and/or airbag system failed.</li>
+								<li>Have system checked immediately.</li>
+							</ul>
+							<p class="light_info bmwABS">Antilock Brake System (ABS)</p>
+							<ul class="light_info bmwABS">
+								<li>The Driver Stability Control Systems, including tire pressure monitoring and ABS, have failed.</li>
+								<li>You can still drive, but drive cautiously and brake earlier than normal.</li>
+								<li>Be extra careful in poor weather conditions.</li>
+								<li>Have the system checked immediately.</li>
+							</ul>
+							<p class="light_info bmwBattery">Battery</p>
+							<ul class="light_info bmwBattery">
+								<li>Something is wrong with your battery.</li>
+								<li>Have it checked as soon as possible.</li>
+							</ul>
+							<p class="light_info bmwCaution">BMW Caution</p>
+							<ul class="light_info bmwCaution">
+								<li>If this signal lights up in red, your brake fluid level is too low.</li>
+								<li>If this signal lights up in yellow, your hill assist feature has failed. Your car will no longer be held in place when the brake is released.</li>
+								<li>In both cases, you can continue your journey, but have systems checked immediately. A lack of brake fluid can reduce brake responsiveness.</li>
+							</ul>
+							<p class="light_info bmwBrakePads">Brake Pads</p>
+							<ul class="light_info bmwBrakePads">
+								<li>This signal means that your brake pads are worn.</li>
+								<li>Worn brake pads reduce brake effectiveness. Exercise caution and have your pads checked without delay.</li>
+							</ul>
+							<p class="light_info bmwCoolant">Coolant Level</p>
+							<ul class="light_info bmwCoolant">
+								<li>Your coolant level is too low. Add coolant immediately.</li>
+							</ul>
+							<p class="light_info bmwDSC">Dynamic Stability Control (DSC)</p>
+							<ul class="light_info bmwDSC">
+								<li>When your traction control system is activated, this lamp lights up.</li>
+							</ul>
+							<p class="light_info bmwEmpty">Empty Light</p>
+							<ul class="light_info bmwEmpty">
+								<li>Your cruising range is no more than 30 miles til empty. Refuel as soon as possible.</li>
+							</ul>
+							<p class="light_info bmwOverheat">Engine Overheating or too hot</p>
+							<ul class="light_info bmwOverheat">
+								<li>Carefully bring the car to a stop, switch off the engine and allow it to cool down.</li>
+								<li>DO NOT open the hood or you risk scalding yourself.</li>
+								<li>Contact DynaSport for assistance.</li>
+							</ul>
+							<p class="light_info bmwEngine">Engine</p>
+							<ul class="light_info bmwEngine">
+								<li>If this light flashes, the engine or some of its components are misfiring, causing malfunction.</li>
+								<li>Reduce speed and have the system checked immediately.</li>
+								<li>Engine misfiring can damage emission control systems.</li>
+							</ul>
+							<p class="light_info bmwBulb">Bulb of Exterior Lighting is Out</p>
+							<ul class="light_info bmwBulb">
+								<li>Have exterior lighting checked as soon as possible.</li>
+								<li>Driving with damaged exterior lighting can draw attention from law enforcement. Think before you drive with a headlight out.</li>
+							</ul>
+							<p class="light_info bmwGasCap">Gas cap missing or loose</p>
+							<ul class="light_info bmwGasCap">
+								<li>The gas cap is missing. Some fuel leakage may occur.</li>
+							</ul>
+							<p class="light_info bmwOilLevel">Oil Level Low</p>
+							<ul class="light_info bmwOilLevel">
+								<li>Your oil level is low. Add oil immediately.</li>
+							</ul>
+							<p class="light_info bmwSafetyBelt">Safety Belts</p>
+							<ul class="light_info bmwSafetyBelt">
+								<li>This light indicates that safety belts are not fastened. Prolonged ignoring of this warning will result in a sound and a flashing of the light until the safety belt is fastened.</li>
+								<li>The Safety Belt warning is activated at speeds over 5 mph.</li>
+								<li>This warning can be activated if items of a certain weight are placed on the front passenger seat while the car is in motion.</li>
+							</ul>
+							<p class="light_info bmwService">Service Vehicle</p>
+							<ul class="light_info bmwService">
+								<li>If this signal lights up in red, your service is overdue.</li>
+								<li>If this lights up in yellow, your vehicle is due for service soon.</li>
+							</ul>
+							<p class="light_info bmwSteering">Steering System (Integral Active Steering)</p>
+							<ul class="light_info bmwSteering">
+								<li>This warning is asking you to initiate a test of your steering system.</li>
+								<li>With the engine running, turn the steering wheel all the way to the left, then all the way to the right several times until the light disappears.</li>
+							</ul>
+							<p class="light_info bmwTemp miniTemp">Temperature Warning</p>
+							<ul class="light_info bmwTemp miniTemp">
+								<li>If you hear a ding and see this indicator light, it means that the temperature outside has dropped below 37 degrees fahrenheit or 3 degrees celcius.</li>
+								<li>Please be aware of road conditions as they could be dangerous.</li>
+							</ul>
+							<p class="light_info bmwTPM">Tire Pressure Monitor</p>
+							<ul class="light_info bmwTPM">
+								<li>If this warning lights up in red, it means your tire or tires have rapidly deflated. Please bring your car to a stop and visit your local tire center for a replacement.</li>
+								<li>If this indicator lamp comes on in yellow, the tire pressure is off about 10% or more.</li>
+								<li>Temperature drops could impact tire pressure.</li>
+								<li>Low tire pressure impacts fuel efficiency. Refill when possible.</li>
+							</ul>
+							<p class="light_info bmwDoor">Vehicle Door is Open</p>
+							<ul class="light_info bmwDoor">
+								<li>A vehicle door is open. Please close before driving.</li>
+							</ul>
+							<p class="light_info bmwWiperFluid">Window washer fluid level too low</p>
+							<ul class="light_info bmwWiperFluid">
+								<li>Add washer fluid as soon as possible.</li>
+							</ul>
+
+							<!-- MINI LIGHTING -->
+							<p class="light_info miniTurns">Turn Signals</p>
+							<p class="light_info miniHighBeams">High beam headlights</p>
+							<p class="light_info miniFogLamps">Fog Lamps</p>
+							<p class="light_info miniRearFogLamps">Rear Fog Lamps</p>
+							<p class="light_info miniLowFuel">Low Fuel Warning</p>
+							<p class="light_info miniLightsOn">Lights Switched On</p>
+							<p class="light_info miniParkingLights">Parking Lights Switched On</p>
+							<p class="light_info miniDoorOpen">Door Open</p>
+							<p class="light_info miniHoodOpen">Hood Open</p>
+							<p class="light_info miniWiperFluid">Wiper Fluid</p>
+							<p class="light_info miniServiceDue">Due for service</p>
+							<p class="light_info miniGearSelector">Gear selector lever not in (P)ark position. Vehicle not prevented from rolling.</p>
+							<p class="light_info miniP-noEngage">Gear selector (P)ark not engaged, ignition cannot be switched off. Select gear lever P.</p>
+							<p class="light_info miniE-steeringLock">Electronic steering wheel lock engaged. Move steering before starting.</p>
+							<p class="light_info miniCruiseFail">Cruise control system failure.</p>
+							<p class="light_info miniParkDistance">Park distance control failure.</p>
+							<p class="light_info miniBulb">Exterior lighting system bulb failure.</p>
+							<p class="light_info miniLightFail">Low beam or fog light failure.</p>
+							<p class="light_info miniHighBeamFail">High beam failure.</p>
+							<p class="light_info miniRearFogFail">Rear fog light failure.</p>
+							<p class="light_info miniHeadThrowFail">Headlight beam throw adjustment failure.</p>
+							<p class="light_info miniAdaptiveLightFail">Adaptive headlight failure.</p>
+							<p class="light_info miniCoolant">Coolant level too low.</p>
+							<p class="light_info miniSafetyBelt">Safety Belts</p>
+							<ul class="light_info miniSafetyBelt">
+								<li>Will illuminate if the seat belt tensioners have failed.</li>
+								<li>If seat belt tensioners have failed, use seat belts as normal.</li>
+								<li>Have the vehicle checked by an authorised workshop immediately.</li>
+							</ul>
+							<p class="light_info miniAirBag">Airbag System</p>
+							<ul class="light_info miniAirBag">
+								<li>Will illuminate if either one or more airbags systems have reported a fault.</li>
+								<li>Have system checked immediately.</li>
+							</ul>
+							<p class="light_info miniPowerSteering">Power Steering Failure</p>
+							<ul class="light_info miniPowerSteering">
+								<li>If this dashboard warning light illuminates, the power assisted steering has failed.</li>
+								<li>The vehicle can still be driven although significantly different steering characteristics will be felt.</li>
+								<li>Contact Dynasport as soon as possible.</li>
+							</ul>
+							<p class="light_info miniEngineNoStart">Engine Refuses to Start</p>
+							<ul class="light_info miniEngineNoStart">
+								<li>To start the engine, depress the brake if the car has automatic transmission, or depress the clutch if the car has manual transmission.</li>
+							</ul>
+							<p class="light_info miniDoorEngineOn">Engine Refuses to Start</p>
+							<ul class="light_info miniDoorEngineOn">
+								<li>This exclamation mark dashboard symbol illuminate when the ignition is attempted to be switched on while the driver door is not shut.</li>
+							</ul>
+							<p class="light_info miniDieselPreheat">Diesel Preheat</p>
+							<ul class="light_info miniDieselPreheat">
+								<li>When temperatures fall below 0C / 32F, starting the engine may be delayed by the use of automatic preheating on diesel engines.</li>
+							</ul>
+							<p class="light_info miniRemoteControl">Remote Control Faulty</p>
+							<ul class="light_info miniRemoteControl">
+								<li>The key dashboard light will illuminate if the remote control is faulty or not detected if the car has convenient access without its need.</li>
+								<li>If the engine cannot be started, have the remote control checked.</li>
+							</ul>
+							<p class="light_info miniBatteryRemote">Remote Control Battery</p>
+							<ul class="light_info miniBatteryRemote">
+								<li>The key with the battery symbol warning will illuminate if the battery in the remote control is discharged or flat.</li>
+								<li>Drive longer journeys to recharge the battery or in older models replace the battery.</li>
+							</ul>
+							<p class="light_info miniEngineMalfunction">Engine Malfunction</p>
+							<ul class="light_info miniEngineMalfunction">
+								<li>Signifies an engine malfunction within your Mini car.</li>
+								<li>The severity of the malfunction depends on the light color:</li>
+									<ul>
+										<li>If the symbol shows red, stop the car and switch off the engine. You will be unable to continue your journey.</li>
+										<li>If the symbol shows yellow, engine power is limited. You can continue the journey, but have the issue dealt with by an authorised workshop as soon as possible.</li>
+									</ul>
+							</ul>
+							<p class="light_info miniEngine">Engine Fault Warning</p>
+							<ul class="light_info miniEngine">
+								<li>Signifies a fault within the engine.</li>
+								<li>On the Mini dashboard, if the fault light is flashing, reduce speed and moderate engine load. High engine load will result in damage to the catalytic converter.</li>
+								<li>If the symbol remains a constant illumination, a degradation in vehicle emissions will occur.</li>
+								<li>In either case, vehicle can be driven, but seek assistance from a vehicle technician as soon as possible.</li>
+							</ul>
+							<p class="light_info miniBattery">Battery Warning</p>
+							<ul class="light_info miniBattery">
+								<li>Severity of the problem is signified by color of the dashboard symbol:</li>
+									<ul>
+										<li>Red indicates the battery is no longer being charged.</li>
+										<li>Yellow indicates the battery has a low charge.</li>
+									</ul>
+								<li>In either case, turn off any vehicle systems that consume electrical charge and have the battery checked as soon as possible.</li>
+							</ul>
+							<p class="light_info miniBrake">Brake Issues</p>
+							<ul class="light_info miniBrake">
+								<li>As well as informing the driver that the handbrake is applied, this warning light has other uses depending on its color:</li>
+									<ul>
+										<li>If red, brake fluid is too low. Top up the brake fluid reservoir with fluid or seek technical assistance if in doubt.</li>
+										<li>If yellow, the Hill Starts Assist feature has failed and the car will not be held in place after the brake has been released.</li>
+									</ul>
+								<li>If the combination shows the above symbol along with the car on a service ramp / lift stand, this signifies the brake pads are worn. This should be looked at without delay as braking could become seriously impaired.</li>
+							</ul>
+							<p class="light_info miniEngineTemp">Engine Temperature</p>
+							<ul class="light_info miniEngineTemp">
+								<li>Severity of the engine temperature warning light depends on color:</li>
+									<ul>
+										<li>If the dashboard symbol is red, overheating will occur. Stop the car and switch off the engine to allow cooling. Do not open hood until engine has sufficiently cooled as there is a risk of scolding.</li>
+										<li>If the light is yellow, the engine is running hot. Slow down and moderate engine load to allow the engine to cool.</li>
+									</ul>
+							</ul>
+							<p class="light_info miniServiceStand">Car on Ramp / Lift</p>
+							<ul class="light_info miniServiceStand">
+								<li>Signifies various issues depending on the color of the symbol when illuminated:</li>
+								<li>RED:</li>
+									<ul>
+										<li>The engine starter has failed. In this situation, you will be unable to start the engine and mechanical assistance is required.</li>
+										<li>The ignition is malfunctioning and the engine is only possible to start when the brake pedal is depressed.</li>
+										<li>Vehicle lighting system failed. Rear and brake lights operational as well as low beam lights. All other light non-operational.</li>
+									</ul>
+								<li>YELLOW:</li>
+									<ul>
+										<li>Brake light failure.</li>
+										<li>Fuel supply faulty. Vehicle will still be operational although speed of vehicle should be moderated.</li>
+										<li>Drive system malfunctioning. Vehicle will still operate though at a reduced speed.</li>
+									</ul>
+							</ul>
+							<p class="light_info miniABS">Anti-lock Brakes</p>
+							<ul class="light_info miniABS">
+								<li>The driving stability control systems have failed, including the run flat indicator.</li>
+								<li>Hampered braking and reduced stability while driving may be experienced.</li>
+								<li>Reduce speed and avoid situations that require full or heavy braking.</li>
+							</ul>
+							<p class="light_info miniOilLevel">Low Engine Oil Pressure</p>
+							<ul class="light_info miniOilLevel">
+								<li>If this light illuminates, you must stop immediately and turn off the engine to avoid serious damage to engine components and to remain safe.</li>
+							</ul>
+							<p class="light_info miniTPM">Tire Run Flat Monitor</p>
+							<ul class="light_info miniTPM">
+								<li>The tire monitor run flat warning light will illuminate due to a failure in the system.</li>
+								<li>A red lights shows that a tire is deflated or that the run flat indicator did not initialise.</li>
+								<li>A yellow symbol will indicate the run flat indicator has failed and punctures will not be detected.</li>
+							</ul>
+							<p class="light_info miniTransHeat">Transmission Overheating</p>
+							<ul class="light_info miniTransHeat">
+								<li>Indicates that the transmission is overheating.</li>
+								<li>The severity of the problem is determined by the color of the symbol:</li>
+									<ul>
+										<li>Red indicates overheating and requires that you stop the vehicle to allow the transmission to cool down before continuing.</li>
+										<li>Yellow indicates a hot transmission. Reduce engine loads to allow for cooling.</li>
+									</ul>
+							</ul>
+							<p class="light_info miniTransFault">Transmission Fault Dashboard</p>
+							<ul class="light_info miniTransFault">
+								<li>Indicates issues with the transmission. The symbol varies in color; red or yellow depending on the type of fault it is displaying:</li>
+								<p>RED:</p>
+									<ul>
+										<li>The Mini transmission limp-home program has activated with a restricted range of gears. this may also reduce acceleration. Vehicle can still be driven although it should be checked as soon as possible.</li>
+										<li>Gears can be engaged without the need to depress the brake. Always depress the brake to engage a gear.</li>
+										<li>The automatic selector lever has locked. Manually unlock the selector lever inter-lock.</li>
+									</ul>
+								<p>YELLOW:</p>
+									<ul>
+										<li>Automatic selector lever is locked in position P with engine running and brake depressed, or the brake signal is faulty as a gear can be engaged without depressing the brake. Manually unlock the selector lever inter-lock or when the vehicle is stationary, always depress the brake before engaging a gear. Before exiting the vehicle, move the selector lever to position P and turn off the engine.</li>
+									</ul>
+							</ul>
+							<p class="light_info miniDSC">Dynamic Stability / Traction Control</p>
+							<ul class="light_info miniDSC">
+								<li>Dynamic Stability Control (DSC) and Dynamic Traction Control (DTC) has failed.</li>
+								<li>Vehicle can still be driven although speed should be reduced, especially around corners where traction and stability may be reduced.</li>
+								<li>Vehicle will need to be checked as soon as possible.</li>
+							</ul>
+							<p class="light_info miniESL">Electric Steering Wheel Lock Faulty</p>
+							<ul class="light_info miniESL">
+								<li>Warning light will illuminate in red when the electric steering wheel lock is faulty.</li>
+								<li>If applicable, do not turn off the engine as it will be unable to be started.</li>
+								<li>A technician will need to resolve the issue.</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="modal-footer">
+					<p>If you see an indicator light and are unclear what it means, please contact DynaSport at <strong>503-241-1717</strong></p> 
+					<p>Or <a href="https://local.intuit.com/b/dynasportllc" target="_blank" class="btn btn-primary btn-sm">click here</a> to schedule a service appointment.</p>
+				</div>
+			</div>
+		</div>
+	</div>
+<!-- END Modal -->
+
+	<nav>
+		<div class="container">
+			<a href="#head" id="toTop"><img src="images/dynalogo2.png" alt="dynasport logo" id="logo"></a>
+			<p>503-241-1717</p>
+		</div>
+	</nav>
+	
+	<main>
+		<section id="about">
+			<div class="sectionRight wow fadeInRight col-md-6 col-md-push-6"></div>
+			<div class="sectionLeft wow fadeInLeft col-md-6 col-md-pull-6">
+				<div id="aboutUs">
+					<div class="content">
+						<h2>About Us</h2>
+						<br>
+						<p>DynaSport was founded by enthusiasts to serve enthusiasts. There’s something special about BMW’s and MINI’s, and we believe there should be something special about the way your vehicle is serviced as well. As BMW and MINI owners ourselves, we understand what’s behind the wheel.</p>
+						<hr>
+						<p>DynaSport offers full service, repairs, stock and performance parts, and performance modifications for all 2002 and newer MINI Coopers and all ranges of BMW’s. From simple oil changes to track preparations, every BMW and MINI receives our professional attention.</p>
+					</div>
+				</div>
+				<div id="performance">
+					<div class="content">
+						<h2>Performance Matters</h2>
+						<br>
+						<p>Automotive manufacturers spend millions developing vehicle systems. Adding the incorrect performance component can actually detract from your car’s performance and reliability. At DynaSport, we do more than just bolt on go-fast parts. We design performance systems to best suit your driving needs. Working with top level performance manufacturers allows us to create synergistic systems to fulfill your performance goals. Feel free to call or come by to talk to us about unlocking your BMW & MINI’s full performance potential.</p>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section id="quotes" class="wow fadeInUp">
+			<div id="quotesContent">
+				<div class='col-md-offset-2 col-md-8 text-center'>
+					<h2>Hear from some of our happy customers</h2>
+				</div>
+				<div class="col-md-offset-1 col-md-10">
+					<div class="carousel slide" data-ride="carousel" id="quote-carousel">
+
+						<!-- Carousel Slides / Quotes -->
+						<div class="carousel-inner">
+
+							<!-- Quote 1 -->
+							<div class="item active">
+								<blockquote>
+									<div class="row">
+										<div class="quote">
+											<p>"The guys at Dynasport are simply the best, no questions asked! No charge to diagnose warning lights and they don't push things on you that you don't need. They tell you honestly and simply what you will need to service down the road but they don't try to trick you into thinking your car will spontaneously combust if you don't do $3000 in unnecessary repairs."</p>
+											<p>-Brian O.</p>
+										</div>
+									</div>
+								</blockquote>
+							</div>
+							<!-- Quote 2 -->
+							<div class="item">
+								<blockquote>
+									<div class="row">
+										<div>
+											<p>Hands down the best service shop I have experienced. The employees are friendly and very smart when it comes to our German cars. Their prices are very reasonable. If you need any sort of work done on your bimmer or mini, this should be your go-to.</p>
+											<p>-Chase R.</p>
+										</div>
+									</div>
+								</blockquote>
+							</div>
+							<!-- Quote 3 -->
+							<div class="item">
+								<blockquote>
+									<div class="row">
+										<div>
+											<p>Overall my experience with DynaSport has been hassle free. The staff members are MINI enthusiasts and are knowledgeable about the intricacies specific to each model and year of manufacture. Comparing my many interactions with other Portland area mechanics who claim to be MINI specialists, these guys are far more straight forward and fair dealing.</p>
+											<p>-F. Grey</p>
+										</div>
+									</div>
+								</blockquote>
+							</div>
+							<!-- Quote 4 -->
+							<div class="item">
+								<blockquote>
+									<div class="row">
+										<div>
+											<p>Hands down the best service shop I have experienced. The employees are friendly and very smart when it comes to our German cars. Their prices are very reasonable. If you need any sort of work done on your bimmer or mini, this should be your go-to.</p>
+											<p>-C. Rosson</p>
+										</div>
+									</div>
+								</blockquote>
+							</div>
+							<!-- Quote 5 -->
+							<div class="item">
+								<blockquote>
+									<div class="row">
+										<div>
+											<p>Best experience I've ever had relating to auto service. Quality work at a great price. I didn't think shops like this still existed.</p>
+											<p>-Dan S.</p>
+										</div>
+									</div>
+								</blockquote>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<div id="instafeed"></div>
+
+		<section id="contactForm">
+			<div class="container wow fadeInLeft" id="contactContent">
+				<p>Please feel free to contact us any way you like. We are happy to answer any questions you may have. We are a resource for any and all BMW & MINI owners.</p>
+				<div class="row">
+					<div class="col-md-6">
+						<p class="wow pulse" data-wow-duration="4s" data-wow-iteration="infinite"><a href="https://local.intuit.com/b/dynasportllc" target="_blank">Schedule an Appointment</a></p>
+						<br>
+						<p>Or send us a message and an associate will be in touch with you soon.</p>
+						<hr>
+						<form class="form-horizontal" action="sendMsg" method="post" name="msgForm" data-toggle="validator" role="form">
+							<div class="form-group">
+								<label for="nameInput" class="col-sm-1 control-label">Name</label>
+								<div class="col-sm-11">
+									<input type="text" class="form-control" name="msgName" id="nameInput" placeholder="First and Last name" required>
+									<span class="help-block with-errors"></span>
+								</div>
+							</div>
+							<div class="form-group">
+								<label for="emailInput" class="col-sm-1 control-label">Email</label>
+								<div class="col-sm-11">
+									<input type="email" class="form-control" name="msgEmail" id="emailInput" placeholder="example@email.com" required>
+									<span class="help-block with-errors"></span>
+								</div>
+							</div>
+							<div class="form-group">
+								<label for="phoneInput" class="col-sm-1 control-label">Phone</label>
+								<div class="col-sm-11">
+									<input type="text" class="form-control" name="msgPhone" id="phoneInput" placeholder="555-555-5555" required>
+									<span class="help-block with-errors"></span>
+								</div>
+							</div>
+							<div class="form-group">
+								<label for="messageTextbox" class="col-sm-1 control-label">Message</label>
+								<div class="col-sm-11">
+									<textarea class="form-control" name="msgMessage" id="messageTextbox" rows="3" placeholder="Message" required></textarea>
+									<span class="help-block with-errors"></span>
+								</div>
+							</div>
+							<div class="form-group">
+								<div class="col-sm-offset-1 col-sm-11">
+									<input type="submit" class="btn btn-default" value="Send">
+									<button type="reset" class="btn btn-danger">Reset</button>
+								</div>
+							</div>
+						</form>
+					</div>
+					<div class="col-md-6">
+						<img src="images/Google_Maps.png" alt="google map" class="img-rounded img-responsive" id="mapImg">
+						<div class="col-xs-8">
+							<address>
+								1321 NW 17th Ave<br>
+								Portland, Oregon 97209<br>
+								<abbr title="Phone">P:</abbr> 503-241-1717
+							</address>
+						</div>
+						<a href="http://maps.google.com/?q=1321+NW+17th+Ave,+Portland,+Oregon,+97209" target="_blank" class="btn btn-default btn-sm col-xs-4" id="mapBtn">View in Google Maps</a>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section id="links">
+			<div id="linksContent">
+				<div class="topLinks">
+					<div class="container">
+						<div class="row">
+							<div class="col-xs-6 col-sm-4 col-sm-offset-1 wow fadeIn" data-wow-duration="3s">
+								<a href="http://www.bridgecitymotors.com" target="_blank"><img src="images/links/BCMLogo.png" alt="Bridge City Motors" class="linkTop_img img-responsive"></a>
+							</div>
+							<div class="col-xs-6 col-sm-4 col-sm-offset-1 wow fadeIn" data-wow-duration="3s">
+								<a href="http://gallagherautospa.com/" target="_blank"><img src="images/links/gallagher.png" alt="Gallagher Auto Spa" class="linkTop_img img-responsive"></a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="bottomLinks">
+					<div class="container">
+						<div class="row">
+							<div class="col-xs-6 col-sm-3 wow zoomIn" data-wow-duration="0.5s">
+								<a href="http://powerflexusa.com/" target="_blank"><img src="images/links/PF_USA_Logo.png" alt="Powerflex USA" class="linkBottom_img img-responsive"></a>
+							</div>
+							<div class="col-xs-6 col-sm-3 wow zoomIn" data-wow-duration="0.5s">
+								<a href="http://www.hrsprings.com" target="_blank"><img src="images/links/hrsprings.png" alt="H and R springs" class="linkBottom_img img-responsive"></a>
+							</div>
+							<div class="col-xs-6 col-sm-3 wow zoomIn" data-wow-duration="0.5s">
+								<a href="http://portlandhomesforcars.com" target="_blank"><img src="images/links/portlandhomesforcars.png" alt="Portland Homes for Cars" class="linkBottom_img img-responsive"></a>
+							</div>
+							<div class="col-xs-6 col-sm-3 wow zoomIn" data-wow-duration="0.5s">
+								<a href="http://www.pro3-racing.com" target="_blank"><img src="images/links/pro3.jpg" alt="pro3 racing" class="linkBottom_img img-responsive"></a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+	</main>
+
+	<footer>
+		<p>DynaSport LLC | MINI and BMW Service, Repair and Performance | Portland, Oregon</p>
+	</footer>
+	
+	<!-- SCRIPTS -->
+	<!-- jQuery -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+	<!-- Instafeed -->
+	<script type="text/javascript" src="javascripts/instafeed.min.js"></script>
+	<!-- Custom js -->
+	<script type="text/javascript" src="javascripts/main.js"></script>
+	<!-- Stellar.js -->
+	<script type="text/javascript" src="javascripts/stellar.js"></script>
+	<!-- WOW.js -->
+	<script type="text/javascript" src="javascripts/wow.min.js"></script>
+	<!-- Validator.js -->
+	<script type="text/javascript" src="javascripts/validator.js"></script>
+	<!-- Sweetalert.js -->
+	<script type="text/javascript" src="javascripts/sweetalert/sweetalert.min.js"></script>
+<% if(message != "undefined"){ %>
+	<script>
+		function redirect(){
+			window.location="/";
+		}
+		var frm = document.getElementsByName('msgForm')[0];
+		swal({
+			title: "Sweet!",
+			text: "A Dynasport associate will be in touch with you soon!",
+			imageUrl: "javascripts/sweetalert/thumbs-up.jpg",
+			allowEscapeKey: false,
+			confirmButtonColor: "#78c7ff"
+		},
+			function(isConfirm){
+				if(isConfirm){
+					confirmButton: redirect();
+				}
+			}
+		);
+		frm.reset();
+	</script>
+<% } %>
+</body>
+</html>
