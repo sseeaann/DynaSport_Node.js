@@ -13,7 +13,9 @@ $(document).ready(function(){
 	wow.init();
 
 // Tooltip:
-	$('[data-tooltip="tooltip"]').tooltip();
+	if(!('ontouchstart' in window)){
+		$('[data-tooltip="tooltip"]').tooltip();
+	}
 
 // Modal:
 	// Car Make
@@ -45,7 +47,7 @@ $(document).ready(function(){
 		$('.light_info, .light_icons, #bmwSelected, #miniSelected').hide();
 	});
 
-// For nav bar: 
+// For nav bar:
 	var winHeight = $(window).height(),
 		showNav = winHeight - $('nav').outerHeight(true),
 		animationEnd = 'webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend',
@@ -108,7 +110,7 @@ $(document).ready(function(){
 				$(image).css('-ms-animation-delay', delay);
 				$(image).css('-o-animation-delay', delay);
 				$(image).css('animation-delay', delay);
-				$(image).addClass('wow fadeInRight');
+				$(image).addClass('wow fadeInUp');
 			});
 		},
 		template: '<a href="{{link}}" target="_blank"><img src="{{image}}" /></a>'
