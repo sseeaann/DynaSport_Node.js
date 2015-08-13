@@ -4,7 +4,7 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta name="description" content="Whether it's maintenance, performance or repair, Dynasport has your BMW and Mini covered. Located in NW Portland, Oregon near the Pearl District.">
-	<title>DynaSport, LLC</title>
+	<title>DynaSport | BMW & MINI</title>
 	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
 	<!-- Latest compiled and minified CSS -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
@@ -25,7 +25,7 @@
 <!-- 	ᕙ(⇀‸↼‶)ᕗ	-->
 	<header id="head">
 		<div class="container">
-			<a type="button" data-toggle="modal" data-target="#dashlightsModal" data-tooltip="tooltip" data-placement="bottom" title="Dashboard Lighting Guide"><i class="fa fa-exclamation-triangle fa-5x"></i></a>
+			<a data-toggle="modal" data-target="#dashlightsModal" data-tooltip="tooltip" data-placement="bottom" title="Dashboard Lighting Guide"><i class="fa fa-exclamation-triangle fa-5x"></i></a>
 		</div>
 		<div id="headerContent" data-stellar-ratio="0.35">
 			<h1><span class="dynasport wow zoomInLeft" id="dyna">Dyna</span><span class="dynasport wow zoomInRight" id="sport">Sport</span></h1>
@@ -45,7 +45,7 @@
 					<div class="row">
 						<div class="col-md-3">
 							<h4>Select Your Make:</h4>
-							<a type="button" class="btn btn-info btn-lg carTog bmw_light" data-id="bmwLights">BMW</a> <a type="button" class="btn btn-danger btn-lg carTog mini_light" data-id="miniLights">MINI</a>
+							<a class="btn btn-info btn-lg carTog bmw_light" data-id="bmwLights">BMW</a> <a class="btn btn-danger btn-lg carTog mini_light" data-id="miniLights">MINI</a>
 						</div>
 						<div class="col-md-9 dashLights">
 							<h4>Select Your Light: <span id="bmwSelected">BMW</span><span id="miniSelected">MINI</span></h4>
@@ -394,11 +394,12 @@
 							<p class="light_info miniEngineMalfunction">Engine Malfunction</p>
 							<ul class="light_info miniEngineMalfunction">
 								<li>Signifies an engine malfunction within your Mini car.</li>
-								<li>The severity of the malfunction depends on the light color:</li>
+								<li>The severity of the malfunction depends on the light color:
 									<ul>
 										<li>If the symbol shows red, stop the car and switch off the engine. You will be unable to continue your journey.</li>
 										<li>If the symbol shows yellow, engine power is limited. You can continue the journey, but have the issue dealt with by an authorised workshop as soon as possible.</li>
 									</ul>
+								</li>
 							</ul>
 							<p class="light_info miniEngine">Engine Fault Warning</p>
 							<ul class="light_info miniEngine">
@@ -409,45 +410,50 @@
 							</ul>
 							<p class="light_info miniBattery">Battery Warning</p>
 							<ul class="light_info miniBattery">
-								<li>Severity of the problem is signified by color of the dashboard symbol:</li>
+								<li>Severity of the problem is signified by color of the dashboard symbol:
 									<ul>
 										<li>Red indicates the battery is no longer being charged.</li>
 										<li>Yellow indicates the battery has a low charge.</li>
 									</ul>
+								</li>
 								<li>In either case, turn off any vehicle systems that consume electrical charge and have the battery checked as soon as possible.</li>
 							</ul>
 							<p class="light_info miniBrake">Brake Issues</p>
 							<ul class="light_info miniBrake">
-								<li>As well as informing the driver that the handbrake is applied, this warning light has other uses depending on its color:</li>
+								<li>As well as informing the driver that the handbrake is applied, this warning light has other uses depending on its color:
 									<ul>
 										<li>If red, brake fluid is too low. Top up the brake fluid reservoir with fluid or seek technical assistance if in doubt.</li>
 										<li>If yellow, the Hill Starts Assist feature has failed and the car will not be held in place after the brake has been released.</li>
 									</ul>
+								</li>
 								<li>If the combination shows the above symbol along with the car on a service ramp / lift stand, this signifies the brake pads are worn. This should be looked at without delay as braking could become seriously impaired.</li>
 							</ul>
 							<p class="light_info miniEngineTemp">Engine Temperature</p>
 							<ul class="light_info miniEngineTemp">
-								<li>Severity of the engine temperature warning light depends on color:</li>
+								<li>Severity of the engine temperature warning light depends on color:
 									<ul>
 										<li>If the dashboard symbol is red, overheating will occur. Stop the car and switch off the engine to allow cooling. Do not open hood until engine has sufficiently cooled as there is a risk of scolding.</li>
 										<li>If the light is yellow, the engine is running hot. Slow down and moderate engine load to allow the engine to cool.</li>
 									</ul>
+								</li>
 							</ul>
 							<p class="light_info miniServiceStand">Car on Ramp / Lift</p>
 							<ul class="light_info miniServiceStand">
 								<li>Signifies various issues depending on the color of the symbol when illuminated:</li>
-								<li>RED:</li>
+								<li>RED:
 									<ul>
 										<li>The engine starter has failed. In this situation, you will be unable to start the engine and mechanical assistance is required.</li>
 										<li>The ignition is malfunctioning and the engine is only possible to start when the brake pedal is depressed.</li>
 										<li>Vehicle lighting system failed. Rear and brake lights operational as well as low beam lights. All other light non-operational.</li>
 									</ul>
-								<li>YELLOW:</li>
+								</li>
+								<li>YELLOW:
 									<ul>
 										<li>Brake light failure.</li>
 										<li>Fuel supply faulty. Vehicle will still be operational although speed of vehicle should be moderated.</li>
 										<li>Drive system malfunctioning. Vehicle will still operate though at a reduced speed.</li>
 									</ul>
+								</li>
 							</ul>
 							<p class="light_info miniABS">Anti-lock Brakes</p>
 							<ul class="light_info miniABS">
@@ -468,25 +474,28 @@
 							<p class="light_info miniTransHeat">Transmission Overheating</p>
 							<ul class="light_info miniTransHeat">
 								<li>Indicates that the transmission is overheating.</li>
-								<li>The severity of the problem is determined by the color of the symbol:</li>
+								<li>The severity of the problem is determined by the color of the symbol:
 									<ul>
 										<li>Red indicates overheating and requires that you stop the vehicle to allow the transmission to cool down before continuing.</li>
 										<li>Yellow indicates a hot transmission. Reduce engine loads to allow for cooling.</li>
 									</ul>
+								</li>
 							</ul>
 							<p class="light_info miniTransFault">Transmission Fault Dashboard</p>
 							<ul class="light_info miniTransFault">
 								<li>Indicates issues with the transmission. The symbol varies in color; red or yellow depending on the type of fault it is displaying:</li>
-								<p>RED:</p>
+								<li>RED:
 									<ul>
 										<li>The Mini transmission limp-home program has activated with a restricted range of gears. this may also reduce acceleration. Vehicle can still be driven although it should be checked as soon as possible.</li>
 										<li>Gears can be engaged without the need to depress the brake. Always depress the brake to engage a gear.</li>
 										<li>The automatic selector lever has locked. Manually unlock the selector lever inter-lock.</li>
 									</ul>
-								<p>YELLOW:</p>
+								</li>
+								<li>YELLOW:
 									<ul>
 										<li>Automatic selector lever is locked in position P with engine running and brake depressed, or the brake signal is faulty as a gear can be engaged without depressing the brake. Manually unlock the selector lever inter-lock or when the vehicle is stationary, always depress the brake before engaging a gear. Before exiting the vehicle, move the selector lever to position P and turn off the engine.</li>
 									</ul>
+								</li>
 							</ul>
 							<p class="light_info miniDSC">Dynamic Stability / Traction Control</p>
 							<ul class="light_info miniDSC">
@@ -624,7 +633,7 @@
 						<br>
 						<p>Or send us a message and an associate will be in touch with you soon.</p>
 						<hr>
-						<form class="form-horizontal" action="sendMsg" method="post" name="msgForm" data-toggle="validator" role="form">
+						<form class="form-horizontal" action="sendMsg" method="post" name="msgForm" data-toggle="validator">
 							<div class="form-group">
 								<label for="nameInput" class="col-sm-1 control-label">Name</label>
 								<div class="col-sm-11">

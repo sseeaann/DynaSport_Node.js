@@ -16,9 +16,9 @@ app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static(path.join(__dirname, "./client/static")));
 
 app.use(cookieParser("moo man"));
-app.use(session({ 
+app.use(session({
 	cookie: { maxAge: 60000 },
-	secret: "moo man" 
+	secret: "moo man"
 }));
 app.use(flash());
 

@@ -77,14 +77,28 @@ header i {
 	margin-top: 10px;
 	text-shadow: 0px 0px 3px #333;
 	-webkit-animation: pulseEffect 2.5s infinite;
+	-moz-animation: pulseEffect 2.5s infinite;
+	animation: pulseEffect 2.5s infinite;
 }
 header i:hover {
 	color: #ffed61;
 	text-shadow: 1px 1px 10px black;
 	cursor: pointer;
 	-webkit-animation: none;
+	-moz-animation: none;
+	animation: none;
 }
 @-webkit-keyframes pulseEffect {
+	0% { color: #ffc233; }
+	50% { color: #ffed61; }
+	100% { color: #ffc233; }
+}
+@-moz-keyframes pulseEffect {
+	0% { color: #ffc233; }
+	50% { color: #ffed61; }
+	100% { color: #ffc233; }
+}
+@keyframes pulseEffect {
 	0% { color: #ffc233; }
 	50% { color: #ffed61; }
 	100% { color: #ffc233; }
